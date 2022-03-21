@@ -1,0 +1,207 @@
+:root {
+    --cor-texto-principal: hsl(240, 38%, 20%);
+    --cor-texto-secundario: hsl(240, 18%, 77%);
+}
+
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline: 5vw;
+}
+
+/* Parte da imagens */
+
+.parteDasImagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    background-image: url(./images/pattern-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 90vw;
+    background-position: center center;
+    z-index: 1;
+}
+
+.imagensDoSlide {
+    margin-top: 10vw;
+}
+
+.imagensDoSlide img {
+    width: 71vw;
+    height: auto;
+    border-radius: 1.5vw;
+    box-shadow: 0vw 16vw 10vw -15vw black;
+}
+
+.imagemSelecionada {
+    display: flex !important;
+    animation: fadeIn 0.2s linear;
+}
+
+.imagemDaTanya {
+    display: none;
+}
+
+.imagemDoJohn {
+    display: none;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 13vw;
+    padding: 3vw;
+    padding-inline: 4vw;
+    border-radius: 30vw;
+    top: -6vw;
+    z-index: 1;
+    background-color: aliceblue;
+}
+
+.botoes img {
+    width: 2.5vw;
+    cursor: pointer;
+}
+
+/* Parte do Texto */
+
+.parteDoTexto {
+    z-index: 2;
+}
+
+.textoDaTanya, .textoDoJohn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    margin-top: 5vw;
+}
+
+.textoSelecionado {
+    display: flex !important;
+    animation: fadeIn 0.2s linear;
+}
+
+.textoDaTanya {
+    display: none;
+}
+
+.textoDoJohn {
+    display: none;
+}
+
+.textoPrincipal {
+    color: var(--cor-texto-principal);
+    font-size: 4.5vw;
+    font-weight: 300;
+}
+
+.nome {
+    color: var(--cor-texto-principal);
+    font-size: 3.7vw;
+    font-weight: 800;
+    margin: 1vw;
+    margin-top: 5vw;
+}
+
+.profissao {
+    color: var(--cor-texto-secundario);
+    font-size: 3vw;
+    font-weight: 500;
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 900px) {
+
+    .conteiner {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+        margin-inline: 10vw;
+    }
+
+    .parteDasImagens {
+        width: 250vw;
+        height: 40vw;
+        background-size: 40vw;
+    }
+
+    .imagensDoSlide {
+        margin-top: 5vw;
+    }
+
+    .imagensDoSlide img {
+        width: 31vw;
+        border-radius: 0.4vw;
+        box-shadow: 1vw 3vw 3vw -2vw black;
+    }
+
+    /*Texto*/
+
+    .parteDoTexto {
+        width: 300vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        margin-right: -10vw;
+    }
+    
+    .textoPrincipal {
+        font-size: 2vw;
+        margin-top: 5vw;
+        text-align: start;
+    }
+
+    .textoDaTanya, .textoDoJohn {
+        margin: 0;
+        align-items: start;
+    }
+
+    .info {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .nome {
+        margin: 0;
+        font-size: 1.5vw;
+    }
+    
+    .profissao {
+        font-size: 1.5vw;
+        margin-left: 1vw;
+    }
+
+    /*botões*/
+
+    .botoes {
+    width: 6vw;
+    padding: 1.2vw;
+    padding-inline: 1vw;
+    top: -2.4vw;
+    left: -10vw;
+    }
+
+    .botoes img {
+        width: 1vw;
+    }
+}
